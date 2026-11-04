@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | رضا تك - RedaTech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- شريط الإعلانات المتحرك الاحترافي -->
+    <div class="announcement-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span><i class="fa-solid fa-bolt"></i> عروض رضا تك الخاصة: شحن مجاني لجميع مناطق المملكة عند الشراء بقيمة 300 ر.س أو أكثر!</span>
+                <span><i class="fa-solid fa-shield-halved"></i> منتجات مضمونة 100% من مؤسسة رضا محمد علي جبلي التجارية</span>
+                <span><i class="fa-brands fa-whatsapp"></i> خدمة العملاء والدعم الفني متوفر عبر الواتساب على مدار الساعة</span>
+            </div>
+            <div class="ticker-content" aria-hidden="true">
+                <span><i class="fa-solid fa-bolt"></i> عروض رضا تك الخاصة: شحن مجاني لجميع مناطق المملكة عند الشراء بقيمة 300 ر.س أو أكثر!</span>
+                <span><i class="fa-solid fa-shield-halved"></i> منتجات مضمونة 100% من مؤسسة رضا محمد علي جبلي التجارية</span>
+                <span><i class="fa-brands fa-whatsapp"></i> خدمة العملاء والدعم الفني متوفر عبر الواتساب على مدار الساعة</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر والترويسة -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-microchip logo-icon"></i>
+                <div class="logo-text">
+                    <span class="brand-name">رضا تك</span>
+                    <span class="brand-sub">RedaTech Solutions</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" onclick="toggleMobileMenu()">الرئيسية</a>
+                <a href="shop.html" onclick="toggleMobileMenu()">المتجر</a>
+                <a href="about.html" class="active" onclick="toggleMobileMenu()">من نحن</a>
+                <a href="terms.html" onclick="toggleMobileMenu()">الشروط والأحكام</a>
+                <a href="privacy.html" onclick="toggleMobileMenu()">سياسة الخصوصية</a>
+                <a href="return.html" onclick="toggleMobileMenu()">سياسة الاسترجاع</a>
+                <a href="contact.html" onclick="toggleMobileMenu()">اتصل بنا</a>
+            </nav>
+
+            <div class="cart-btn-wrapper" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- محتوى صفحة من نحن المطابق للنموذج -->
+    <main class="about-page-container">
+        
+        <!-- قسم من نحن والمقدمة -->
+        <section class="about-section container">
+            <div class="about-intro-text">
+                <p class="lead-text">منشأة متخصصة في بيع الأجهزة الإلكترونية والمنتجات التقنية، نساعدك على الوصول إلى الخيار الأنسب لاحتياجك، من الجهاز اليومي إلى التجميعة الاحترافية.</p>
+            </div>
+            
+            <div class="about-main-grid">
+                <div class="about-content-box">
+                    <span class="section-tag"></span>
+                    <h2 class="section-heading">من نحن</h2>
+                    <p>نقدم لعملائنا حلولاً متكاملة تشمل الأجهزة، الملحقات، وتجميعات الكمبيوتر، بتشكيلة متنوعة تركز على جودة الخيارات ووضوح المعلومات وخدمة العملاء.</p>
+                    <p>سواء كنت تبحث عن جهاز للاستخدام اليومي، لابتوب للأعمال، جوال حديث، منصة ألعاب، أو تجميعة كمبيوتر عالية الأداء، نساعدك على المقارنة والاختيار حسب احتياجك وميزانيتك.</p>
+                    
+                    <div class="vision-mission-grid" style="margin-top: 30px;">
+                        <div>
+                            <h4>رؤيتنا</h4>
+                            <p style="color: var(--text-muted); font-size: 0.95rem;">أن نكون من الجهات الموثوقة والرائدة في بيع الأجهزة الإلكترونية والحلول التقنية في المملكة العربية السعودية.</p>
+                        </div>
+                        <div>
+                            <h4>رسالتنا</h4>
+                            <p style="color: var(--text-muted); font-size: 0.95rem;">تقديم منتجات تقنية متنوعة وموثوقة، مع خدمة احترافية وتجربة شراء تواكب تطور عالم التقنية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم قيمنا -->
+        <section class="values-section container">
+            <div class="section-title-wrapper" style="text-align: right; margin-bottom: 30px;">
+                <span class="section-tag"></span>
+                <h2 class="section-heading">قيمنا</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>الجودة والموثوقية</h3>
+                    <p>منتجات مختارة بمواصفات واضحة.</p>
+                </div>
+                <div class="value-item">
+                    <h3>الشفافية والوضوح</h3>
+                    <p>معلومات مباشرة بلا مبالغة تسويقية.</p>
+                </div>
+                <div class="value-item">
+                    <h3>رضا العملاء</h3>
+                    <p>متابعة تبدأ قبل الشراء وتستمر بعده.</p>
+                </div>
+                <div class="value-item">
+                    <h3>التطور ومواكبة التقنية</h3>
+                    <p>نتابع الجديد ونضيف الأنسب منه.</p>
+                </div>
+                <div class="value-item">
+                    <h3>الاحترافية في التعامل</h3>
+                    <p>تعامل منظم وواضح في كل مرحلة.</p>
+                </div>
+                <div class="value-item">
+                    <h3>حلول تناسب الاحتياج</h3>
+                    <p>الخيار يُبنى على استخدامك، لا على الأغلى.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم أقسام المنتجات -->
+        <section class="store-sections-overview container">
+            <div class="section-title-wrapper" style="text-align: right; margin-bottom: 30px;">
+                <span class="section-tag"></span>
+                <h2 class="section-heading">أقسام المنتجات</h2>
+            </div>
+            
+            <div class="category-showcase-card">
+                <div class="cat-info">
+                    <h3>اللابتوبات</h3>
+                    <p>أجهزة للعمل، الدراسة، التصميم، البرمجة، والألعاب. أداء عالي للمحترفين.</p>
+                </div>
+                <div class="cat-tags">
+                    <span>لابتوبات الأعمال</span>
+                    <span>لابتوبات الدراسة</span>
+                    <span>التصميم والمونتاج</span>
+                    <span>لابتوبات الألعاب</span>
+                    <span>أجهزة خفيفة ومحمولة</span>
+                    <span>أداء عالي للمحترفين</span>
+                </div>
+            </div>
+
+            <div class="category-showcase-card">
+                <div class="cat-info">
+                    <h3>الجوالات والأجهزة الذكية</h3>
+                    <p>تصميم عصري وأداء قوي وتقنيات حديثة.</p>
+                </div>
+                <div class="cat-tags">
+                    <span>الهواتف الذكية</span>
+                    <span>الساعات الذكية</span>
+                    <span>الأجهزة اللوحية</span>
+                    <span>الشواحن والكابلات</span>
+                    <span>ملحقات الجوال</span>
+                    <span>الواقيات والحافظات</span>
+                </div>
+            </div>
+
+            <div class="category-showcase-card">
+                <div class="cat-info">
+                    <h3>الإكسسوارات والملحقات</h3>
+                    <p>تفاصيل صغيرة تحسن أداء أجهزتك واستخدامك اليومي.</p>
+                </div>
+                <div class="cat-tags">
+                    <span>لوحات المفاتيح</span>
+                    <span>الفأرات</span>
+                    <span>السماعات</span>
+                    <span>الشاشات</span>
+                    <span>الكاميرات</span>
+                    <span>الميكروفونات</span>
+                    <span>قواعد اللابتوب</span>
+                    <span>الشواحن</span>
+                    <span>محولات التوصيل</span>
+                    <span>الكابلات</span>
+                    <span>وحدات التخزين</span>
+                    <span>الإكسسوارات المكتبية</span>
+                </div>
+            </div>
+
+            <div class="category-showcase-card">
+                <div class="cat-info">
+                    <h3>البلايستيشن ومنتجات الألعاب</h3>
+                    <p>كل ما تحتاجه لتجربة ألعاب متكاملة.</p>
+                </div>
+                <div class="cat-tags">
+                    <span>أجهزة البلايستيشن</span>
+                    <span>أذرع التحكم</span>
+                    <span>سماعات الألعاب</span>
+                    <span>شاشات الألعاب</span>
+                    <span>كراسي الألعاب</span>
+                    <span>لوحات المفاتيح والفأرات</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم خدماتنا -->
+        <section class="services-overview container">
+            <div class="section-title-wrapper" style="text-align: right; margin-bottom: 30px;">
+                <span class="section-tag"></span>
+                <h2 class="section-heading">خدماتنا</h2>
+            </div>
+            
+            <div class="services-grid-box">
+                <div class="service-box-item">
+                    <h3>بيع الأجهزة الإلكترونية</h3>
+                    <p>تشكيلة متكاملة للأفراد والأعمال بخيارات تناسب مختلف الاستخدامات والميزانيات.</p>
+                </div>
+                <div class="service-box-item">
+                    <h3>تجهيز التجميعات</h3>
+                    <p>اختيار وتجهيز تجميعة متوازنة للألعاب أو العمل أو الاستخدام الاحترافي.</p>
+                </div>
+                <div class="service-box-item">
+                    <h3>الاستشارات التقنية</h3>
+                    <p>مساعدتك في فهم المواصفات والمقارنة بين الخيارات قبل الشراء.</p>
+                </div>
+                <div class="service-box-item">
+                    <h3>تجهيز طلبات الشركات</h3>
+                    <p>حلول للمنشآت والمكاتب تشمل الأجهزة والشاشات والملحقات وتجهيزات العمل.</p>
+                </div>
+                <div class="service-box-item">
+                    <h3>توفير الإكسسوارات</h3>
+                    <p>ملحقات تحسن أداء أجهزتك وتنظم بيئة العمل والترفيه.</p>
+                </div>
+                <div class="service-box-item">
+                    <h3>حلول الألعاب</h3>
+                    <p>من أجهزة البلايستيشن إلى تجميعات الألعاب وملحقاتها.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- لماذا رضا تك -->
+        <section class="why-us-section container">
+            <div class="section-title-wrapper" style="text-align: right; margin-bottom: 30px;">
+                <span class="section-tag"></span>
+                <h2 class="section-heading">لماذا رضا تك</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <h3>تشكيلة متنوعة</h3>
+                    <p>كل ما تحتاجه من أجهزة وإكسسوارات في مكان واحد.</p>
+                </div>
+                <div class="why-item">
+                    <h3>خيارات متعددة</h3>
+                    <p>مواصفات وفئات سعرية مختلفة تناسب احتياجات متعددة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم ابن جهازك بالطريقة التي تناسبك -->
+        <section class="build-pc-section container">
+            <div class="section-title-wrapper" style="text-align: right; margin-bottom: 20px;">
+                <span class="section-tag"></span>
+                <h2 class="section-heading">ابْنِ جهازك بالطريقة التي تناسبك</h2>
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 1.05rem;">
+                كمبيوتر للألعاب، جهاز للمونتاج، محطة عمل للتصميم، أو تجميعة متوازنة للاستخدام اليومي. نساعدك على اختيار مكونات متوافقة تحقق التوازن بين الأداء والجودة والميزانية.
+            </p>
+
+            <div class="steps-list">
+                <div class="step-row">
+                    <span class="step-num">1</span>
+                    <p>نفهم احتياجك والاستخدام الأساسي للجهاز.</p>
+                </div>
+                <div class="step-row">
+                    <span class="step-num">2</span>
+                    <p>نحدد الميزانية المناسبة معك.</p>
+                </div>
+                <div class="step-row">
+                    <span class="step-num">3</span>
+                    <p>نختار المكونات المتوافقة مع بعضها.</p>
+                </div>
+                <div class="step-row">
+                    <span class="step-num">4</span>
+                    <p>نراجع الأداء المتوقع وقابلية التطوير لاحقًا.</p>
+                </div>
+                <div class="step-row">
+                    <span class="step-num">5</span>
+                    <p>نجهز التجميعة وفق المواصفات المتفق عليها.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- سلة المشتريات الجانبية -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> سلة المشتريات</h3>
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total-price"><span>المجموع الكلي:</span><span id="cart-total">0.00 ر.س</span></div>
+            <button class="btn btn-whatsapp" onclick="checkoutWhatsApp()"><i class="fa-brands fa-whatsapp"></i> إتمام الطلب عبر الواتساب</button>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- الفوتر المحسن والاحترافي -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom: 15px;">
+                    <i class="fa-solid fa-microchip logo-icon"></i>
+                    <span>رضا تك | RedaTech</span>
+                </a>
+                <p>مؤسسة رضا محمد علي جبلي التجارية - مكة المكرمة، المملكة العربية السعودية.</p>
+                <div class="footer-socials" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="https://wa.me/966546634675" target="_blank" style="color: var(--whatsapp-green); font-size: 1.2rem;"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:mr.lonely@outlook.sa" style="color: var(--primary-color); font-size: 1.2rem;"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>روابط هامة</h4>
+                <a href="shop.html">المتجر الإلكتروني</a>
+                <a href="about.html">من نحن</a>
+                <a href="terms.html">الشروط والأحكام</a>
+                <a href="privacy.html">سياسة الخصوصية</a>
+                <a href="return.html">سياسة الاسترجاع والاسترداد</a>
+                <a href="contact.html">معلومات الاتصال</a>
+            </div>
+            <div class="footer-legal">
+                <h4>بيانات التوثيق والاعتماد</h4>
+                <p><strong>اسم المنشأة:</strong> مؤسسة رضا محمد علي جبلي التجارية</p>
+                <p><strong>السجل التجاري:</strong> 7048811660</p>
+                <p><strong>الرقم الضريبي:</strong> 312846415400003</p>
+                <p><strong>العنوان:</strong> مكة المكرمة - حي الرصيفة - شارع الكفاح</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <p>جميع الحقوق محفوظة &copy; 2026 لمؤسسة رضا محمد علي جبلي التجارية (RedaTech Solutions).</p>
+                <p style="font-size: 0.78rem; color: #94a3b8;">متجر معتمد وموثق وفق أنظمة التجارة الإلكترونية بالمملكة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

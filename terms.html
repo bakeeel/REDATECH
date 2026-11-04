@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشروط والأحكام | رضا تك - RedaTech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- شريط الإعلانات المتحرك الاحترافي -->
+    <div class="announcement-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span><i class="fa-solid fa-bolt"></i> عروض رضا تك الخاصة: شحن مجاني لجميع مناطق المملكة عند الشراء بقيمة 300 ر.س أو أكثر!</span>
+                <span><i class="fa-solid fa-shield-halved"></i> منتجات مضمونة 100% من مؤسسة رضا محمد علي جبلي التجارية</span>
+                <span><i class="fa-brands fa-whatsapp"></i> خدمة العملاء والدعم الفني متوفر عبر الواتساب على مدار الساعة</span>
+            </div>
+            <div class="ticker-content" aria-hidden="true">
+                <span><i class="fa-solid fa-bolt"></i> عروض رضا تك الخاصة: شحن مجاني لجميع مناطق المملكة عند الشراء بقيمة 300 ر.س أو أكثر!</span>
+                <span><i class="fa-solid fa-shield-halved"></i> منتجات مضمونة 100% من مؤسسة رضا محمد علي جبلي التجارية</span>
+                <span><i class="fa-brands fa-whatsapp"></i> خدمة العملاء والدعم الفني متوفر عبر الواتساب على مدار الساعة</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر والترويسة -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-microchip logo-icon"></i>
+                <div class="logo-text">
+                    <span class="brand-name">رضا تك</span>
+                    <span class="brand-sub">RedaTech Solutions</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" onclick="toggleMobileMenu()">الرئيسية</a>
+                <a href="shop.html" onclick="toggleMobileMenu()">المتجر</a>
+                <a href="about.html" onclick="toggleMobileMenu()">من نحن</a>
+                <a href="terms.html" class="active" onclick="toggleMobileMenu()">الشروط والأحكام</a>
+                <a href="privacy.html" onclick="toggleMobileMenu()">سياسة الخصوصية</a>
+                <a href="return.html" onclick="toggleMobileMenu()">سياسة الاسترجاع</a>
+                <a href="contact.html" onclick="toggleMobileMenu()">اتصل بنا</a>
+            </nav>
+
+            <div class="cart-btn-wrapper" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container" style="padding: 50px 20px; line-height: 1.8;">
+        <h1 style="margin-bottom: 25px; color: var(--primary-color);">الشروط والأحكام</h1>
+        
+        <div style="background: white; padding: 35px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <h3 style="margin-bottom: 12px; color: var(--text-dark); font-size: 1.2rem;">1. المقدمة والتعريفات</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">
+                مرحباً بكم في متجر <strong>"رضا تك | RedaTech Solutions"</strong> المملوك لـ <strong>مؤسسة رضا محمد علي جبلي التجارية</strong>، سجل تجاري رقم (7048811660). تعتبر هذه الشروط والأحكام سارية وملزمة لكافة مستخدمي الموقع والعملاء وتحدد الحقوق والالتزامات المتعلقة بعمليات التصفح والشراء.
+            </p>
+
+            <h3 style="margin-bottom: 12px; color: var(--text-dark); font-size: 1.2rem;">2. استخدام المتجر وشروط التسجيل</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">
+                بإجراء أي طلب أو استخدام للمتجر، يتعهد العميل بأن كافة البيانات الشخصية المدخلة دقيقة وصحيحة، وأن عمره لا يقل عن 18 عاماً أو أنه يقوم بإتمام عملية الشراء تحت إشراف وموافقة ولي الأمر أو الوصي القانوني.
+            </p>
+
+            <h3 style="margin-bottom: 12px; color: var(--text-dark); font-size: 1.2rem;">3. الأسعار والمنتجات وضريبة القيمة المضافة</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">
+                كافة الأسعار المعروضة على المنتجات مُقدرة بالريال السعودي (ر.س) وتتضمن ضريبة القيمة المضافة (VAT) وفقاً لشهادة التسجيل الضريبي رقم (312846415400003). نحتفظ بالحق في تعديل الأسعار، المواصفات، أو توفر المنتجات في أي وقت دون إشعار مسبق مع ضمان عدم تأثير ذلك على الطلبات المؤكدة مسبقاً.
+            </p>
+
+            <h3 style="margin-bottom: 12px; color: var(--text-dark); font-size: 1.2rem;">4. طرق الدفع وإتمام الطلبات</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                يتيح المتجر إتمام الطلبات عبر وسائل الدفع الإلكتروني المعتمدة أو من خلال التأكيد المباشر وإرسال تفاصيل الفاتورة عبر رقم الواتساب الرسمي للمتجر: 
+                <strong style="color: var(--whatsapp-green); direction: ltr; display: inline-block;">+966 54 663 4675</strong>.
+            </p>
+        </div>
+    </main>
+
+    <!-- سلة المشتريات الجانبية -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> سلة المشتريات</h3>
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>المجموع الكلي:</span>
+                <span id="cart-total">0.00 ر.س</span>
+            </div>
+            <button class="btn btn-whatsapp" onclick="checkoutWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> إتمام الطلب عبر الواتساب
+            </button>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- الفوتر المحسن والاحترافي -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom: 15px;">
+                    <i class="fa-solid fa-microchip logo-icon"></i>
+                    <span>رضا تك | RedaTech</span>
+                </a>
+                <p>مؤسسة رضا محمد علي جبلي التجارية - مكة المكرمة، المملكة العربية السعودية.</p>
+                <div class="footer-socials" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="https://wa.me/966546634675" target="_blank" style="color: var(--whatsapp-green); font-size: 1.2rem;"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:mr.lonely@outlook.sa" style="color: var(--primary-color); font-size: 1.2rem;"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>روابط هامة</h4>
+                <a href="shop.html">المتجر الإلكتروني</a>
+                <a href="about.html">من نحن</a>
+                <a href="terms.html">الشروط والأحكام</a>
+                <a href="privacy.html">سياسة الخصوصية</a>
+                <a href="return.html">سياسة الاسترجاع والاسترداد</a>
+                <a href="contact.html">معلومات الاتصال</a>
+            </div>
+            <div class="footer-legal">
+                <h4>بيانات التوثيق والاعتماد</h4>
+                <p><strong>اسم المنشأة:</strong> مؤسسة رضا محمد علي جبلي التجارية</p>
+                <p><strong>السجل التجاري:</strong> 7048811660</p>
+                <p><strong>الرقم الضريبي:</strong> 312846415400003</p>
+                <p><strong>العنوان:</strong> مكة المكرمة - حي الرصيفة - شارع الكفاح</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <p>جميع الحقوق محفوظة &copy; 2026 لمؤسسة رضا محمد علي جبلي التجارية (RedaTech Solutions).</p>
+                <p style="font-size: 0.78rem; color: #94a3b8;">متجر معتمد وموثق وفق أنظمة التجارة الإلكترونية بالمملكة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

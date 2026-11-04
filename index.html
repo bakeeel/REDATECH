@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رضا تك | RedaTech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- شريط الإعلانات العلوي الاحترافي -->
+ 
+    <div class="announcement-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span><i class="fa-solid fa-bolt"></i> عروض رضا تك الخاصة: شحن مجاني لجميع مناطق المملكة عند الشراء بقيمة 300 ر.س أو أكثر!</span>
+                <span><i class="fa-solid fa-shield-halved"></i> منتجات مضمونة 100% من مؤسسة رضا محمد علي جبلي التجارية</span>
+                <span><i class="fa-brands fa-whatsapp"></i> خدمة العملاء والدعم الفني متوفر عبر الواتساب على مدار الساعة</span>
+            </div>
+            <!-- تكرار المحتوى لضمان استمرارية الحركة بدون انقطاع -->
+            <div class="ticker-content" aria-hidden="true">
+                <span><i class="fa-solid fa-bolt"></i> عروض رضا تك الخاصة: شحن مجاني لجميع مناطق المملكة عند الشراء بقيمة 300 ر.س أو أكثر!</span>
+                <span><i class="fa-solid fa-shield-halved"></i> منتجات مضمونة 100% من مؤسسة رضا محمد علي جبلي التجارية</span>
+                <span><i class="fa-brands fa-whatsapp"></i> خدمة العملاء والدعم الفني متوفر عبر الواتساب على مدار الساعة</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر والترويسة -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-microchip logo-icon"></i>
+                <div class="logo-text">
+                    <span class="brand-name">رضا تك</span>
+                    <span class="brand-sub">RedaTech Solutions</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active" onclick="toggleMobileMenu()">الرئيسية</a>
+                <a href="shop.html" onclick="toggleMobileMenu()">المتجر</a>
+                <a href="about.html" onclick="toggleMobileMenu()">من نحن</a>
+                <a href="terms.html" onclick="toggleMobileMenu()">الشروط والأحكام</a>
+                <a href="privacy.html" onclick="toggleMobileMenu()">سياسة الخصوصية</a>
+                <a href="return.html" onclick="toggleMobileMenu()">سياسة الاسترجاع</a>
+                <a href="contact.html" onclick="toggleMobileMenu()">اتصل بنا</a>
+            </nav>
+
+            <div class="cart-btn-wrapper" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- البانر الرئيسي بخلفية جذابة -->
+    <section class="hero-section hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">حلول تقنية متكاملة</span>
+            <h1>أحدث المنتجات الإلكترونية والتقنية </h1>
+            <p>نوفر لك أجهزة ومستلزمات التقنية المعتمدة بجودة عالية وضمان موثوق، من مؤسسة رضا محمد علي جبلي التجارية[cite: 2].</p>
+            <div class="hero-btns">
+                <a href="shop.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> تصفح جميع المنتجات</a>
+                <a href="contact.html" class="btn btn-outline-hero"><i class="fa-solid fa-headset"></i> تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مميزات المتجر -->
+    <section class="features-section">
+        <div class="container features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h3>منتجات أصيلة وموثوقة</h3>
+                    <p>جميع منتجاتنا مضمونة ومعتمدة</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div>
+                    <h3>توصيل سريع</h3>
+                    <p>شحن لجميع مناطق المملكة العربية السعودية</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    <h3>طلب مباشر وسريع</h3>
+                    <p>إتمام الطلب فوراً عبر الواتساب</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <h3>دعم فني متواصل</h3>
+                    <p>خدمة عملاء على مدار الساعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم أقسام الفئات المنتجات -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أقسام المنتجات</h2>
+                <p class="section-subtitle">تصفح الفئات المتاحة في متجرنا التقني</p>
+            </div>
+            <div class="categories-grid">
+                <a href="shop.html?category=desktops" class="category-card">
+                    <div class="category-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>أجهزة الكمبيوتر</h3>
+                    <p>أجهزة مكتبية وتجميعات احترافية للعمل والألعاب</p>
+                </a>
+                <a href="shop.html?category=laptops" class="category-card">
+                    <div class="category-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h3>أجهزة اللابتوب</h3>
+                    <p>أحدث المحمولات للأعمال والتنقل بجودة عالية</p>
+                </a>
+                <a href="shop.html?category=phones" class="category-card">
+                    <div class="category-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>الجوالات والإكسسوارات</h3>
+                    <p>هواتف ذكية وأجهزة لوحية وملحقات أصلية</p>
+                </a>
+                <a href="shop.html?category=networking" class="category-card">
+                    <div class="category-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>الشبكات والمراقبة</h3>
+                    <p>راوترات وموزعات شبكات وكاميرات مراقبة</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم منتجات مختارة -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أحدث المنتجات الموصى بها</h2>
+                <p class="section-subtitle">اختر منتجاتك وأضفها للسلة لإتمام الطلب بسهولة</p>
+            </div>
+            <div class="products-grid" id="featured-products-container">
+                <!-- يتم تحميل المنتجات الممتازة هنا عبر JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="shop.html" class="btn btn-outline" style="padding: 12px 35px; font-size: 1rem;">عرض كل المنتجات في المتجر <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- سلة المشتريات الجانبية -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> سلة المشتريات</h3>
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- عناصر السلة -->
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>المجموع الكلي:</span>
+                <span id="cart-total">0.00 ر.س</span>
+            </div>
+            <button class="btn btn-whatsapp" onclick="checkoutWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> إتمام الطلب عبر الواتساب
+            </button>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- الفوتر المحسن والاحترافي -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom: 15px;">
+                    <i class="fa-solid fa-microchip logo-icon"></i>
+                    <span>رضا تك | RedaTech</span>
+                </a>
+                <p>منشأة متخصصة في بيع الأجهزة الإلكترونية والمنتجات التقنية، نساعدك على الوصول للخيار الأنسب لاحتياجك[cite: 5].</p>
+                <div class="footer-socials" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="https://wa.me/966546634675" target="_blank" style="color: var(--whatsapp-green); font-size: 1.2rem;"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:mr.lonely@outlook.sa" style="color: var(--primary-color); font-size: 1.2rem;"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>روابط هامة</h4>
+                <a href="shop.html">المتجر الإلكتروني</a>
+                <a href="about.html">من نحن</a>
+                <a href="terms.html">الشروط والأحكام</a>
+                <a href="privacy.html">سياسة الخصوصية</a>
+                <a href="return.html">سياسة الاسترجاع والاسترداد</a>
+                <a href="contact.html">معلومات الاتصال</a>
+            </div>
+            <div class="footer-legal">
+                <h4>بيانات التوثيق والاعتماد</h4>
+                <p><strong>اسم المنشأة:</strong> مؤسسة رضا محمد علي جبلي التجارية[cite: 2]</p>
+                <p><strong>السجل التجاري:</strong> 7048811660[cite: 2]</p>
+                <p><strong>الرقم الضريبي:</strong> 312846415400003[cite: 4]</p>
+                <p><strong>العنوان:</strong> مكة المكرمة - حي الرصيفة[cite: 1, 4]</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <p>جميع الحقوق محفوظة &copy; 2026 لمؤسسة رضا محمد علي جبلي التجارية (RedaTech Solutions)[cite: 2].</p>
+                <p style="font-size: 0.78rem; color: #94a3b8;">متجر معتمد وموثق وفق أنظمة التجارة الإلكترونية بالمملكة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
