@@ -103,13 +103,13 @@ function renderProducts(itemsToRender = products, containerId = 'products-contai
 }
 
 // دالة تصفية المنتجات حسب الفئة (في صفحة المتجر)
-function filterCategory(cat) {
+function filterCategory(cat, btnElement) {
     const buttons = document.querySelectorAll('.filter-btn');
     buttons.forEach(b => b.classList.remove('active'));
     
-    // تفعيل زر الفئة الحالي إذا تم الضغط عليه
-    if (event && event.target) {
-        event.target.classList.add('active');
+    const activeBtn = btnElement || (typeof event !== 'undefined' && event.target);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
     }
 
     if (cat === 'all') {
@@ -146,26 +146,30 @@ function updateCartUI() {
     cartCount.innerText = totalItems;
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = '<div style="text-align:center; padding: 40px 0; color:#64748b;"><i class="fa-solid fa-basket-shopping" style="font-size:2.5rem; margin-bottom:10px;"></i><p>السلة فارغة حالياً</p></div>';
-        cartTotal.innerText = '0.00 ر.س';
+        if (cartContainer) {
+            cartContainer.innerHTML = '<div style="text-align:center; padding: 40px 0; color:#64748b;"><i class="fa-solid fa-basket-shopping" style="font-size:2.5rem; margin-bottom:10px;"></i><p>السلة فارغة حالياً</p></div>';
+        }
+        if (cartTotal) cartTotal.innerText = '0.00 ر.س';
         return;
     }
 
-    cartContainer.innerHTML = cart.map(item => `
-        <div class="cart-item">
-            <div>
-                <div class="cart-item-title">${item.title}</div>
-                <small style="color:#64748b;">${item.price} ر.س × ${item.qty}</small>
+    if (cartContainer) {
+        cartContainer.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <div>
+                    <div class="cart-item-title">${item.title}</div>
+                    <small style="color:#64748b;">${item.price} ر.س × ${item.qty}</small>
+                </div>
+                <div style="text-align: left;">
+                    <div class="cart-item-price">${item.price * item.qty} ر.س</div>
+                    <button onclick="removeFromCart(${item.id})" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:0.8rem; margin-top:4px;">حذف</button>
+                </div>
             </div>
-            <div style="text-align: left;">
-                <div class="cart-item-price">${item.price * item.qty} ر.س</div>
-                <button onclick="removeFromCart(${item.id})" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:0.8rem; margin-top:4px;">حذف</button>
-            </div>
-        </div>
-    `).join('');
+        `).join('');
+    }
 
     const total = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
-    cartTotal.innerText = `${total.toFixed(2)} ر.س`;
+    if (cartTotal) cartTotal.innerText = `${total.toFixed(2)} ر.س`;
 }
 
 // حذف عنصر من السلة
@@ -182,30 +186,32 @@ function toggleCart(forceOpen = false) {
     
     if (forceOpen) {
         sidebar.classList.add('active');
-        overlay.classList.add('active');
+        if (overlay) overlay.classList.add('active');
     } else {
         sidebar.classList.toggle('active');
-        overlay.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
     }
 }
 
-// التحكم بقائمة الموبايل الجانبية
 // التحكم بقائمة الموبايل الجانبية بشكل جذري ومضمون
-function toggleMobileMenu() {
+function toggleMobileMenu(forceClose = false) {
     const navLinks = document.getElementById('nav-links');
     const overlay = document.getElementById('mobile-nav-overlay');
     
-    if (navLinks && overlay) {
-        navLinks.classList.toggle('active');
-        overlay.classList.toggle('active');
-        
-        // إعادة التمرير طبيعياً لضمان عدم حجب أي نقرة
-        if (navLinks.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+    if (!navLinks) return;
+
+    if (forceClose) {
+        navLinks.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        return;
     }
+
+    const isOpen = navLinks.classList.toggle('active');
+    if (overlay) {
+        overlay.classList.toggle('active', isOpen);
+    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
 }
 
 // إتمام الطلب وتحويله للواتساب
@@ -249,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderProducts(filtered, 'all-products-container');
             
             // تحديد الزر النشط في الفلتر إن وجد
-            const targetBtn = document.querySelector(`[onclick="filterCategory('${cat}')"]`);
+            const targetBtn = document.querySelector(`[onclick*="filterCategory('${cat}')"]`);
             if (targetBtn) {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 targetBtn.classList.add('active');
@@ -258,6 +264,11 @@ document.addEventListener('DOMContentLoaded', () => {
             renderProducts(products, 'all-products-container');
         }
     }
+
+    // إغلاق قائمة الموبايل تلقائياً عند النقر على أي رابط بداخلها
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+    });
     
     updateCartUI();
 });
