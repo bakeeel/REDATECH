@@ -238,7 +238,7 @@ function checkoutWhatsApp() {
 
 // التشغيل التلقائي عند تحميل أي صفحة
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. إذا كانت الصفحة تحتوي على حاوية المنتجات المميزة (الصفحة الرئيسية)
+    // إذا كانت الصفحة تحتوي على حاوية المنتجات المميزة (الصفحة الرئيسية)
     if (document.getElementById('products-container')) {
         renderProducts(products.slice(0, 4), 'products-container');
     }
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts(products.slice(0, 4), 'featured-products-container');
     }
 
-    // 2. إذا كانت الصفحة صفحة المتجر الشاملة (shop.html)
+    // إذا كانت الصفحة صفحة المتجر الشاملة (shop.html)
     if (document.getElementById('all-products-container')) {
         const urlParams = new URLSearchParams(window.location.search);
         const cat = urlParams.get('category');
